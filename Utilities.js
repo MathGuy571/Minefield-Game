@@ -16,11 +16,12 @@ const line = (x1, y1, x2, y2, color, width=1) => {
     ctx.closePath();
 };
 
-const circle = (x, y, r, color, stroke=true) => {
+const circle = (x, y, r, color, stroke=true, width=1) => {
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2*π);
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
+    ctx.lineWidth = width;
     stroke? ctx.stroke() : ctx.fill();
     ctx.closePath();
 };
