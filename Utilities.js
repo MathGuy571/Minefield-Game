@@ -42,6 +42,16 @@ const sp = () => {
     }
 };
 
+const setSize = (w, h, pd) => {
+    //canvas apparent size
+    c.style.width = `${w}px`;
+    c.style.height = `${h}px`;
+    
+    //canvas actual size
+    c.width = W = w * pd;
+    c.height = H = h * pd;
+};
+
 const clear = () => ctx.clearRect(0, 0, W, H);
 
 const info = (msg) => alert(msg);
