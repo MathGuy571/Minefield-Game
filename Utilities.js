@@ -1,4 +1,4 @@
-//const random = (max=1, min=0) => Math.random()*(max-min) + min;
+const random = (max=1, min=0) => Math.random()*(max-min) + min;
 
 const calcFPS = () => {
     let timeDiff = Date.now() - lastTimeCalled;
@@ -28,3 +28,5 @@ const map = (v, vmin, vmax, mvMin, mvMax) => {
     let b = v - vmin;
     return a * b + mvMin;
 };
+
+const clear = () => ctx.clearRect(0, 0, W, H);
