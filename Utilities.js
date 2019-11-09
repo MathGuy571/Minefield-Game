@@ -1,4 +1,4 @@
-const random = (max=1, min=0) => Math.random()*(max-min) + min;
+//const random = (max=1, min=0) => Math.random()*(max-min) + min;
 
 const calcFPS = () => {
     let timeDiff = Date.now() - lastTimeCalled;
