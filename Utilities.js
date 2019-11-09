@@ -30,3 +30,5 @@ const map = (v, vmin, vmax, mvMin, mvMax) => {
 };
 
 const clear = () => ctx.clearRect(0, 0, W, H);
+
+const info = (msg) => alert("msg");
