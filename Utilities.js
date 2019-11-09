@@ -29,6 +29,16 @@ const map = (v, vmin, vmax, mvMin, mvMax) => {
     return a * b + mvMin;
 };
 
+const sp = () => {
+    if(!paused) {
+        window.cancelAnimationFrame(fc);
+        paused = true;
+    } else {
+        window.requestAnimationFrame(animate);
+        paused = false;
+    }
+};
+
 const clear = () => ctx.clearRect(0, 0, W, H);
 
 const info = (msg) => alert(msg);
