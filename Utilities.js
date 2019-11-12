@@ -55,3 +55,4 @@ const setSize = (w, h, pd) => {
 const clear = () => ctx.clearRect(0, 0, W, H);
 
 const info = (msg) => alert(msg);
+const log = (msg) => console.log(msg);
