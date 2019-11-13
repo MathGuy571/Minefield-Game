@@ -52,7 +52,7 @@ const setSize = (w, h, pd) => {
     c.height = H = h * pd;
 };
 
-const clear = (a) => {
-    ctx.fillStyle = "rgba(0, 0, 0,"+a+")";
-    ctx.clearRect(0, 0, W, H);
+const clear = (r, g, b, a) => {
+    ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+    ctx.fillRect(0, 0, W, H);
 }
