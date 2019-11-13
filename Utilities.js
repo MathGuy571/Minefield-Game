@@ -53,6 +53,6 @@ const setSize = (w, h, pd) => {
 };
 
 const clear = (r=255, g=255, b=255, a) => {
-    ctx.fillStyle = "rgba("+r+","+g+","+b+","+a+")";
+    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
     ctx.fillRect(0, 0, W, H);
 }
