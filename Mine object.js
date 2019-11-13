@@ -9,6 +9,7 @@ class Mine {
     
     checkPosition() {
         do {
+            //mine - player distance
             let v1 = new Vector(this.p.x, this.p.y);
             let v2 = new Vector(p.p.x, p.p.y);
             v1.subtract(v2);
