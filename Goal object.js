@@ -43,6 +43,14 @@ class Goal {
         } while(this.invgpdist || this.invgmdist);
     }
     
+    relocate() {
+        this.p.x = random(W);
+        this.p.y = random(H);
+        this.invgpdist = true;
+        this.invgmdist = true;
+        this.checkPosition();
+    }
+
     draw() {
         circle(this.p.x, this.p.y, this.r, "rgb(0, 255, 0)", false);
     }
