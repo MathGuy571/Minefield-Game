@@ -10,13 +10,13 @@ class Goal {
     
     checkPosition() {
         do {
-            //check player - goal distance
-            let v1 = new Vector(p.p.x, p.p.y);
-            let v2 = new Vector(this.p.x, this.p.y);
-            v2.subtract(v1);
-            let gpdist = v2.magn();
+            //check goal - player distance
+            let v1 = new Vector(this.p.x, this.p.y);
+            let v2 = new Vector(p.p.x, p.p.y);
+            v1.subtract(v2);
+            let gpdist = v1.magn();
             
-            if(gpdist<(this.r+p.r)) {
+            if(gpdist<(this.r + p.r)) {
                 this.p.x = random(W);
                 this.p.y = random(H);
             } else {
@@ -29,8 +29,8 @@ class Goal {
                 let v1 = new Vector(this.p.x, this.p.y);
                 let v2 = new Vector(mines[i].p.x, mines[i].p.y);
                 v1.subtract(v2);
-                let gmdist = v2.magn();
-                if(gmdist<(this.r+mines[i].r)) {
+                let gmdist = v1.magn();
+                if(gmdist<(this.r + mines[i].r)) {
                     this.p.x = random(W);
                     this.p.y = random(H);
                 } else {
