@@ -9,12 +9,12 @@ class Mine {
     
     checkPosition() {
         do {
-            let v1 = new Vector(p.p.x, p.p.y);
-            let v2 = new Vector(this.p.x, this.p.y);
-            v2.subtract(v1);
-            let mpdist = v2.magn();
+            let v1 = new Vector(this.p.x, this.p.y);
+            let v2 = new Vector(p.p.x, p.p.y);
+            v1.subtract(v2);
+            let mpdist = v1.magn();
             
-            if(mpdist<(this.r+p.r)) {
+            if(mpdist<(this.r + p.r)) {
                 this.p.x = random(W);
                 this.p.y = random(H);
             } else {
