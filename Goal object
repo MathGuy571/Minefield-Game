@@ -4,7 +4,7 @@ class Goal {
         this.r = 10;
         
         this.invgpdist = true;
-        this.invmgdist = true;
+        this.invgmdist = true;
         this.checkPosition();
     }
     
@@ -26,11 +26,11 @@ class Goal {
             //check goal - mines distance
             let sum = 0;
             for(let i=0; i<mines.length; i++) {
-                let v1 = new Vector(mines[i].p.x, mines[i].p.y);
-                let v2 = new Vector(this.p.x, this.p.y);
-                v2.subtract(v1);
-                let mgdist = v2.magn();
-                if(mgdist<(this.r+mines[i].r)) {
+                let v1 = new Vector(this.p.x, this.p.y);
+                let v2 = new Vector(mines[i].p.x, mines[i].p.y);
+                v1.subtract(v2);
+                let gmdist = v2.magn();
+                if(gmdist<(this.r+mines[i].r)) {
                     this.p.x = random(W);
                     this.p.y = random(H);
                 } else {
@@ -39,8 +39,8 @@ class Goal {
             }
             
             if(sum == mines.length)
-                this.invmgdist = false;
-        } while(this.invgpdist || this.invmgdist);
+                this.invgmdist = false;
+        } while(this.invgpdist || this.invgmdist);
     }
     
     draw() {
