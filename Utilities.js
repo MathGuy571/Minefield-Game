@@ -1,5 +1,3 @@
-const  { PI:π, sin, cos, atan, hypot, abs, round, floor } = Math;
-
 const random = (max=1, min=0) => Math.random()*(max-min) + min;
 
 const calcFPS = () => {
@@ -54,7 +52,7 @@ const setSize = (w, h, pd) => {
     c.height = H = h * pd;
 };
 
-const clear = (r=255, g=255, b=255, a) => {
+const clear = (r=255, g=255, b=255, a=1) => {
     ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
     ctx.fillRect(0, 0, W, H);
-}
+};
