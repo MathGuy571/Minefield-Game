@@ -1,3 +1,5 @@
+const  { PI:π, sin, cos, atan, hypot, abs, round, floor } = Math;
+
 const random = (max=1, min=0) => Math.random()*(max-min) + min;
 
 const calcFPS = () => {
