@@ -25,6 +25,6 @@ class Mine {
     }
     
     draw() {
-        circle(this.p.x, this.p.y, this.r, 0, 2*Math.PI, 1, false, "rgb(255, 0, 0)");
+        circle(this.p.x, this.p.y, this.r, 0, 2*Math.PI, false);
     }
 }
