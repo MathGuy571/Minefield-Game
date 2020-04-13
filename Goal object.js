@@ -52,6 +52,7 @@ class Goal {
     }
 
     draw() {
+        ctx.fillStyle = "green";
         circle(this.p.x, this.p.y, this.r, 0, 2*Math.PI, false);
     }
 }
