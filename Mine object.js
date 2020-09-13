@@ -25,11 +25,10 @@ class Mine {
     }
     
     draw() {
-        ctx.fillStyle = "red";
-        circle({
-            pos: [this.p.x, this.p.y],
-            r: this.r,
-            stroke: false
-        });
+        ctx.beginPath();
+        ctx.arc(this.p.x, this.p.y, this.r, 0, 2*Math.PI);
+        ctx.fillStyle = "rgb(255, 0, 0)";
+        ctx.fill();
+        ctx.closePath();
     }
 }
