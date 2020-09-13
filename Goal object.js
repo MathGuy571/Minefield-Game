@@ -54,7 +54,7 @@ class Goal {
     draw() {
         ctx.beginPath();
         ctx.arc(this.p.x, this.p.y, this.r, 0, 2*Math.PI);
-        ctx.fillStyle = "rgb(255, 0, 0)";
+        ctx.fillStyle = "rgb(0, 255, 0)";
         ctx.fill();
         ctx.closePath();
     }
