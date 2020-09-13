@@ -26,6 +26,10 @@ class Mine {
     
     draw() {
         ctx.fillStyle = "red";
-        circle(this.p.x, this.p.y, this.r, 0, 2*Math.PI, false);
+        circle({
+            pos: [this.p.x, this.p.y],
+            r: this.r,
+            stroke: false
+        });
     }
 }
